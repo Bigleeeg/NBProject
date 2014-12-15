@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Runtime.Serialization;
+using System.Text;
+using JIAOFENG.Practices.Library.Common;
+
+namespace {0}.PersisterceEntity
+{{
+    public partial class {1}Entity : EntityExtInfo
+    {{
+	    #region constructor
+        public {1}Entity()
+        {{
+{2}
+        }}
+        public {1}Entity({1}Entity {3})
+        {{
+			CopyFrom({3});
+        }}
+		#endregion
+
+		#region property
+{5}
+		#endregion
+
+		public void CopyFrom({1}Entity {3})
+		{{
+{4}
+		}}
+    }}
+}}

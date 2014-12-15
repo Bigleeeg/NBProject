@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{64A97C2E-D679-410A-B53B-D8E6F85DBD68}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dashinginfo.Practices.Logic.Wechat</RootNamespace>
+    <AssemblyName>Dashinginfo.Practices.Logic.Wechat</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dashinginfo.Practices.Database\DLL\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dal\IWechatPushDal.cs" />
+    <Compile Include="Dal\WechatPushDal.cs" />
+    <Compile Include="Dal\MySQLWechatPushDal.cs" />
+    <Compile Include="DefaultServiceHandler.cs" />
+    <Compile Include="Entity\WechatpushEntity.cs" />
+    <Compile Include="IServiceHandler.cs" />
+    <Compile Include="PushStatus.cs" />
+    <Compile Include="Response\Message\TemplateMessage.cs" />
+    <Compile Include="ServiceHandler.cs" />
+    <Compile Include="Token\AccessTokenTypeEnum.cs" />
+    <Compile Include="WechatBaseController.cs" />
+    <Compile Include="WechatManager.cs" />
+    <Compile Include="WechatOauthController.cs" />
+    <Compile Include="WechatResult.cs" />
+    <Compile Include="Menu\Button.cs" />
+    <Compile Include="Menu\ClickButton.cs" />
+    <Compile Include="CommonUtil.cs" />
+    <Compile Include="Menu\ComplexButton.cs" />
+    <Compile Include="Const.cs" />
+    <Compile Include="Menu\Menu.cs" />
+    <Compile Include="MenuUtil.cs" />
+    <Compile Include="Request\Event\LocationEvent.cs" />
+    <Compile Include="Request\Event\MenuEvent.cs" />
+    <Compile Include="Request\Message\ImageMessage.cs" />
+    <Compile Include="Request\Message\LinkMessage.cs" />
+    <Compile Include="Request\Message\LocationMessage.cs" />
+    <Compile Include="Request\Message\MessageFactory.cs" />
+    <Compile Include="Request\Message\TextMessage.cs" />
+    <Compile Include="Request\Message\VideoMessage.cs" />
+    <Compile Include="Request\Message\VoiceMessage.cs" />
+    <Compile Include="Request\Event\QRCodeEvent.cs" />
+    <Compile Include="Request\Event\SubscribeEvent.cs" />
+    <Compile Include="Request\Event\BaseEvent.cs" />
+    <Compile Include="Request\Message\BaseMessage.cs" />
+    <Compile Include="Response\Message\Article.cs" />
+    <Compile Include="Response\Message\BaseMessage.cs" />
+    <Compile Include="Response\Message\Image.cs" />
+    <Compile Include="Response\Message\ImageMessage.cs" />
+    <Compile Include="Response\Message\NewsMessage.cs" />
+    <Compile Include="Response\Message\TextMessage.cs" />
+    <Compile Include="Response\Message\Video.cs" />
+    <Compile Include="Response\Message\VideoMessage.cs" />
+    <Compile Include="Response\Message\Voice.cs" />
+    <Compile Include="Response\Message\VoiceMessage.cs" />
+    <Compile Include="Token\Token.cs" />
+    <Compile Include="Menu\ViewButton.cs" />
+    <Compile Include="WechatController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Token\WechatOauth2Token.cs" />
+    <Compile Include="Token\WechatOauthCode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dashinginfo.Practices.Database\JIAOFENG.Practices.Database.csproj">
+      <Project>{d14e25d0-f75c-4c96-9ad4-101dbe1c5c5d}</Project>
+      <Name>JIAOFENG.Practices.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dashinginfo.Practices.Library.Mvc\JIAOFENG.Practices.Library.Mvc.csproj">
+      <Project>{6cc4b2ec-216b-465f-9caa-4b22d27498f5}</Project>
+      <Name>JIAOFENG.Practices.Library.Mvc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dashinginfo.Practices.Library\JIAOFENG.Practices.Library.csproj">
+      <Project>{86cd6421-de7a-423e-a80d-ee58a34d125e}</Project>
+      <Name>JIAOFENG.Practices.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dashinginfo.Practices.Logic.Log\JIAOFENG.Practices.Logic.Log.csproj">
+      <Project>{10ee8508-b595-4de5-8923-d3ce4d0087fe}</Project>
+      <Name>JIAOFENG.Practices.Logic.Log</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

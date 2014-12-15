@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{86CD6421-DE7A-423E-A80D-EE58A34D125E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dashinginfo.Practices.Library</RootNamespace>
+    <AssemblyName>Dashinginfo.Practices.Library</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.3.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>FileIO\dll\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Windows\assembly\GAC\Microsoft.Office.Interop.Excel\12.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>FileIO\dll\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>FileIO\dll\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>FileIO\dll\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\CommonException.cs" />
+    <Compile Include="Common\CommonExtension.cs" />
+    <Compile Include="Common\Constant.cs" />
+    <Compile Include="Common\DataLostException.cs" />
+    <Compile Include="Common\DomainEntity.cs" />
+    <Compile Include="Common\EntityExtInfo.cs" />
+    <Compile Include="Common\FaultCodeAttribute.cs" />
+    <Compile Include="Common\Hierarchy.cs" />
+    <Compile Include="Common\IDBEntity.cs" />
+    <Compile Include="Common\IHierarchyNode.cs" />
+    <Compile Include="Common\IPrimaryKey.cs" />
+    <Compile Include="Common\ISelectItem.cs" />
+    <Compile Include="Common\ReturnResult.cs" />
+    <Compile Include="Cryptography\SHA1Cryptography.cs" />
+    <Compile Include="FileIO\ExcelCellDataFormat.cs" />
+    <Compile Include="FileIO\ExcelCell.cs" />
+    <Compile Include="FileIO\ExcelCellBorderStyle.cs" />
+    <Compile Include="FileIO\ExcelCellStyle.cs" />
+    <Compile Include="FileIO\ExcelHeadStyle.cs" />
+    <Compile Include="FileIO\ExcelRow.cs" />
+    <Compile Include="FileIO\ExcelSheet.cs" />
+    <Compile Include="FileIO\ExcelSubjectStyle.cs" />
+    <Compile Include="FileIO\ExcelSummary.cs" />
+    <Compile Include="FileIO\ExcelSummaryTitleStyle.cs" />
+    <Compile Include="FileIO\ExcelWorkbook.cs" />
+    <Compile Include="FileIO\Region.cs" />
+    <Compile Include="Paged\IPaged.cs" />
+    <Compile Include="Common\ObjectPool.cs" />
+    <Compile Include="Paged\PagedDataExtension.cs" />
+    <Compile Include="Paged\PagedList.cs" />
+    <Compile Include="Paged\PagedTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\SyncGuard.cs" />
+    <Compile Include="Cryptography\DESCryptography.cs" />
+    <Compile Include="Cryptography\MD5Cryptography.cs" />
+    <Compile Include="Cryptography\SymmetricCryptography.cs" />
+    <Compile Include="FileIO\ExcelOperate.cs" />
+    <Compile Include="FileIO\ExcelReader.cs" />
+    <Compile Include="FileIO\FileExporter.cs" />
+    <Compile Include="FileIO\FileOperator.cs" />
+    <Compile Include="FileIO\FileType.cs" />
+    <Compile Include="FileIO\NPOIExcel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tasks\BackgroundTask\BackgroundTaskArgs.cs" />
+    <Compile Include="Tasks\BackgroundTask\IBackgroundTask.cs" />
+    <Compile Include="Tasks\BackgroundTask\LoadBackgroundTask.cs" />
+    <Compile Include="Tasks\BootStrapperTask\BootStrapper.cs" />
+    <Compile Include="Tasks\BootStrapperTask\BootStrapperTaskArgs.cs" />
+    <Compile Include="Tasks\BootStrapperTask\HostTargets.cs" />
+    <Compile Include="Tasks\BootStrapperTask\IBootStrapperTask.cs" />
+    <Compile Include="Tasks\BootStrapperTask\TaskUsageAttribute.cs" />
+    <Compile Include="Utility\CallMessage.cs" />
+    <Compile Include="Utility\CookieHelper.cs" />
+    <Compile Include="Utility\DateHelper.cs" />
+    <Compile Include="Utility\EnumHelper.cs" />
+    <Compile Include="Utility\FormatValidate.cs" />
+    <Compile Include="Utility\JsonHelper.cs" />
+    <Compile Include="Utility\NetStreamUtility.cs" />
+    <Compile Include="Utility\Rmb.cs" />
+    <Compile Include="Utility\StringFilter.cs" />
+    <Compile Include="Utility\StringHelper.cs" />
+    <Compile Include="Utility\UrlOper.cs" />
+    <Compile Include="Utility\Utility.cs" />
+    <Compile Include="Utility\XmlHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FileIO\dll\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="FileIO\dll\itextsharp.dll" />
+    <Content Include="FileIO\dll\NPOI.dll" />
+    <Content Include="FileIO\dll\NPOI.OOXML.dll" />
+    <Content Include="FileIO\dll\NPOI.OOXML.XML" />
+    <Content Include="FileIO\dll\NPOI.OpenXml4Net.dll" />
+    <Content Include="FileIO\dll\NPOI.OpenXml4Net.XML" />
+    <Content Include="FileIO\dll\NPOI.OpenXmlFormats.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FileIO\resource\simhei.ttf" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,57 @@
+﻿		/// <summary>
+		/// 插入记录
+		/// </summary>
+		public static {0}Entity Add({0}Entity entity)
+		{{
+			int nextId = Convert.ToInt32(DatabaseFactory.CreateDatabase().ExecuteScalar(CommandType.Text,"select seq_{0}.Nextval from dual",null));
+			const string sql = "INSERT INTO [{0}] ({1}) VALUES ({2});";
+
+			List<System.Data.OracleClient.OracleParameter> oraParameterList = new List<OracleParameter>();
+{4}
+
+			int id = Convert.ToInt32(DatabaseFactory.CreateDatabase().ExecuteScalar(CommandType.Text, sql, oraParameterList.ToArray()));
+            if (id > 0)
+            {{
+				entity.{3} = id;
+                return entity;
+            }}
+            return null;
+		}}
+		private static void AddBatch(List<{0}Entity> entities)
+        {{
+		    if (entities == null || entities.Count == 0)
+			{{
+				return;
+			}}
+			int nextId = Convert.ToInt32(DatabaseFactory.CreateDatabase().ExecuteScalar(CommandType.Text,"select seq_{0}.Nextval from dual",null));
+            const string sqlFormat = "INSERT INTO [{0}] ({1}) VALUES ({{0}});";
+            string sql = string.Empty;
+            int index = 0;
+			string currentParameter = string.Empty;
+            List<System.Data.OracleClient.OracleParameter> oraParameterList = new List<OracleParameter>();
+            foreach({0}Entity entity in entities)
+            {{
+                string valuesParas = string.Empty;
+{5}
+                valuesParas = valuesParas.Substring(1);
+                sql = sql + string.Format(sqlFormat, valuesParas);
+				index++;
+            }}
+            
+            DatabaseFactory.CreateDatabase().ExecuteNonQuery(CommandType.Text, sql, oraParameterList.ToArray());
+        }}
+		/// <summary>
+		/// 批量插入记录
+		/// </summary>
+		public static void Add(List<{0}Entity> entities)
+        {{
+            int i = 0;
+            const int size = {6};
+            do
+            {{
+                List<{0}Entity> contents = entities.Skip(i * size).Take(size).ToList();
+                AddBatch(contents);
+                i++;
+            }} while (i * size < entities.Count);
+
+        }}

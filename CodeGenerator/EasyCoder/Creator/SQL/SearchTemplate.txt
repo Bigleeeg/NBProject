@@ -1,0 +1,343 @@
+﻿		/// <summary>
+		/// 转换数据记录到实体对象
+		/// </summary>
+		private static {0}Entity DataRowToEntity(DataRow dr)
+		{{
+			{0}Entity entity = new {0}Entity();
+			if (dr != null)
+			{{
+{1}
+			}}
+			return entity;
+		}}
+
+		/// <summary>
+		/// 转换数据记录到实体对象
+		/// </summary>
+		private static void DataRowToEntity({0}Entity entity, out DataRow dr)
+		{{
+			if (dr != null)
+			{{
+				entity = DataRowToEntity(dr);
+			}}
+		}}
+
+		/// <summary>
+		/// 转换数据表到实体集合
+		/// </summary>
+		private static List<{0}Entity> DataTableToList(DataTable dt)
+        {{
+            List<{0}Entity> list = new List<{0}Entity>();
+            foreach (DataRow dr in dt.Rows)
+            {{
+                list.Add(DataRowToEntity(dr));
+            }}
+            return list;
+        }}
+		/// <summary>
+		/// 得到一个对象实体
+		/// </summary>
+		public static {0}Entity GetEntityByID(int id)
+		{{			
+			string sql = "select top 1 * from [{0}] where {2}=" + id;
+			DataSet ds =  DatabaseFactory.CreateDatabase().ExecuteDataSet(sql);
+			if (ds.Tables[0].Rows.Count > 0)
+			{{
+				return DataRowToEntity(ds.Tables[0].Rows[0]);
+			}}
+			else
+			{{
+				return null;
+			}}
+		}}
+
+		/// <summary>
+		/// 得到一个对象实体
+		/// </summary>
+		public static {0}Entity GetEntityByColumnValue(string columnName, object columnValue)
+		{{			
+			Dictionary<string, object> where = new Dictionary<string, object>();
+            where.Add(columnName, columnValue);
+
+			List<{0}Entity> list = GetList(where);
+		    if (list.Count > 0)
+			{{
+				return list[0];
+			}}
+			return null;
+		}}
+
+		/// <summary>
+		/// 得到一个对象实体
+		/// </summary>
+		public static {0}Entity GetEntityByColumnValue(string columnName1, object columnValue1, string columnName2, object columnValue2)
+		{{	
+		    List<{0}Entity> list = GetList(columnName1, columnValue1, columnName2, columnValue2);
+		    if (list.Count > 0)
+			{{
+				return list[0];
+			}}
+			return null;
+		}}
+
+		/// <summary>
+		/// 得到多个对象实体
+		/// </summary>
+		public static List<{0}Entity> GetListByIDs(string ids)
+		{{			
+			List<{0}Entity> list = new List<{0}Entity>();
+			if (!string.IsNullOrEmpty(ids))
+			{{
+				string sql = "select * from [{0}] where {2} in (" + ids + ")";
+				DataSet ds =  DatabaseFactory.CreateDatabase().ExecuteDataSet(sql);
+				if (ds.Tables[0].Rows.Count > 0)
+				{{
+					foreach(DataRow dr in ds.Tables[0].Rows)
+					{{
+						list.Add(DataRowToEntity(dr));
+					}}
+				}}
+			}}
+			return list;
+		}}
+
+		/// <summary>
+		/// 得到多个对象实体
+		/// </summary>
+		public static List<{0}Entity> GetListByIDs(List<int> ids)
+		{{
+			return GetListByIDs(string.Join(",", ids));
+		}}
+
+		/// <summary>
+		/// 得到多个对象实体
+		/// </summary>
+		public static List<{0}Entity> GetListByIDs(int[] ids)
+		{{
+			return GetListByIDs(string.Join(",", ids));
+		}}
+
+		/// <summary>
+		/// 得到多个对象实体
+		/// </summary>
+		public static List<{0}Entity> GetList(string where)
+		{{			
+			DataSet ds =  GetDataSet(where);
+			return DataTableToList(ds.Tables[0]);
+		}}
+
+		/// <summary>
+		/// 得到多个对象实体
+		/// </summary>
+		public static List<{0}Entity> GetListAll()
+		{{		
+		    Dictionary<string, object> where = new Dictionary<string, object>();
+
+			return GetList(where);
+		}}
+
+		/// <summary>
+		/// 获取DataSet
+		/// </summary>
+		public static DataSet GetDataSet(Dictionary<string, object> where)
+		{{						 
+			 string columns = string.Empty;
+             List<System.Data.SqlClient.SqlParameter> sqlParameterList = new List<System.Data.SqlClient.SqlParameter>();
+             foreach (string key in where.Keys)
+             {{
+                 columns += " and [" + key + "]=" + "@" + key;
+                 sqlParameterList.Add(new System.Data.SqlClient.SqlParameter("@" + key, where[key]));
+             }}
+			 string sql = "select * from [{0}] where 1=1" + columns + " order by {2}";
+			 DataSet ds =  DatabaseFactory.CreateDatabase().ExecuteDataSet(CommandType.Text, sql, sqlParameterList.ToArray());
+	
+			 return ds;
+		}}
+
+		/// <summary>
+		/// 获取DataSet
+		/// </summary>
+		public static List<{0}Entity> GetList(Dictionary<string, object> where)
+		{{		
+		    DataSet ds = GetDataSet(where);				 
+			return DataTableToList(ds.Tables[0]);
+		}}
+
+		/// <summary>
+		/// 得到多个对象实体
+		/// </summary>
+		public static List<{0}Entity> GetList(string columnName1, object columnValue1, string columnName2, object columnValue2)
+		{{			
+		    Dictionary<string, object> where = new Dictionary<string, object>();
+            where.Add(columnName1, columnValue1);
+			where.Add(columnName2, columnValue2);
+			return GetList(where);
+		}}
+
+		/// <summary>
+		/// 得到多个对象实体
+		/// </summary>
+		public static List<{0}Entity> GetList(string columnName, object columnValue)
+		{{			
+		    Dictionary<string, object> where = new Dictionary<string, object>();
+            where.Add(columnName, columnValue);
+
+			return GetList(where);
+		}}
+
+		/// <summary>
+		/// 得到多个对象实体
+		/// </summary>
+		public static DataSet GetDataSet(string where)
+		{{			
+		    if (where == null) where = "";
+			if (where.Trim() != "")
+			{{
+				where = " where " + where;
+			}}
+			string sql = "select * from [{0}]" + where;
+			DataSet ds =  DatabaseFactory.CreateDatabase().ExecuteDataSet(sql);
+			return ds;
+		}}
+
+		/// <summary>
+		/// 得到多个对象实体
+		/// </summary>
+		public static DataSet GetDataSetAll()
+		{{			
+		    string where = "";
+
+			return GetDataSet(where);
+		}}
+
+		/// <summary>
+        /// 执行分页数据查询
+        /// </summary>
+        /// <param name="commandText">sql查询语句</param>
+        /// <param name="orderBy">sql语句的排序列</param>
+        /// <param name="pageIndex">显示第几页数据</param>
+        /// <param name="pageSize">每页记录树</param>
+        /// <param name="commandParameters">sql语句的参数</param>
+        /// <returns>分页后的table</returns>
+        public static PagedTable ExecutePagedTable(string commandText, string orderBy, int pageIndex, int pageSize, params DbParameter[] commandParameters)
+        {{           
+            return DatabaseFactory.CreateDatabase().ExecutePagedTable(commandText, orderBy, pageIndex, pageSize, commandParameters);
+        }}
+
+		/// <summary>
+		/// 得到多个对象实体
+		/// </summary>
+		public static PagedList<{0}Entity> GetPagedList(string commandText, string orderBy, int pageIndex, int pageSize, params DbParameter[] commandParameters)
+		{{			
+			PagedTable pt =  ExecutePagedTable(commandText, orderBy, pageIndex, pageSize, commandParameters);
+			List<{0}Entity> list = DataTableToList(pt);
+
+			PagedList<{0}Entity> pagedList = new PagedList<{0}Entity>(list, pageIndex, pageSize, pt.TotalItemCount);
+			return pagedList;
+		}}
+
+		/// <summary>
+		/// 获取记录总数
+		/// </summary>
+		public static int GetRecordCount(string where)
+		{{			
+			if (where == null) where = "";
+			if (where.Trim() != "")
+			{{
+				where = " where " + where;
+			}}
+			string sql = "select count(1) from [{0}] " + where;
+			object o =  DatabaseFactory.CreateDatabase().ExecuteScalar(sql);
+	
+			return Convert.ToInt32(o);
+		}}
+
+		/// <summary>
+		/// 获取记录总数
+		/// </summary>
+		public static int GetRecordCount(Dictionary<string, object> where)
+		{{						 
+			 string columns = string.Empty;
+             List<System.Data.SqlClient.SqlParameter> sqlParameterList = new List<System.Data.SqlClient.SqlParameter>();
+             foreach (string key in where.Keys)
+             {{
+                 columns += " and [" + key + "]=" + "@" + key;
+                 sqlParameterList.Add(new System.Data.SqlClient.SqlParameter("@" + key, where[key]));
+             }}
+			 string sql = "select count(1) from [{0}] where 1=1" + columns;
+			object o =  DatabaseFactory.CreateDatabase().ExecuteScalar(CommandType.Text, sql, sqlParameterList.ToArray());
+	
+			return Convert.ToInt32(o);
+		}}
+
+		public static int GetPKId(Dictionary<string, object> where)
+		{{
+		     string columns = string.Empty;
+             List<System.Data.SqlClient.SqlParameter> sqlParameterList = new List<System.Data.SqlClient.SqlParameter>();
+             foreach (string key in where.Keys)
+             {{
+                 columns += " and [" + key + "]=" + "@" + key;
+                 sqlParameterList.Add(new System.Data.SqlClient.SqlParameter("@" + key, where[key]));
+             }}
+			 string sql = "select isnull(MAX({2}),0) from [{0}] where 1=1" + columns;
+			object o =  DatabaseFactory.CreateDatabase().ExecuteScalar(CommandType.Text, sql, sqlParameterList.ToArray());
+	
+			return Convert.ToInt32(o);
+		}}
+		/// <summary>
+		/// 是否存在该记录
+		/// </summary>
+		public static bool Exists(int id)
+		{{
+			string where = "{2}=" + id;	
+			return GetRecordCount(where) > 0;
+		}}
+
+		/// <summary>
+		/// 是否存在该记录
+		/// </summary>
+		public static bool Exists(string columnName, object columnValue)
+		{{
+			Dictionary<string, object> where = new Dictionary<string, object>();
+            where.Add(columnName, columnValue);
+			return Exists(where);
+		}}
+
+		/// <summary>
+		/// 是否存在该记录
+		/// </summary>
+		public static bool Exists(Dictionary<string, object> where)
+		{{
+			 return GetRecordCount(where) > 0;
+		}}
+
+		/// <summary>
+		/// 是否存在该记录
+		/// </summary>
+		public static bool Exists(string columnName1, object columnValue1, string columnName2, object columnValue2)
+		{{
+			Dictionary<string, object> where = new Dictionary<string, object>();
+            where.Add(columnName1, columnValue1);
+			where.Add(columnName2, columnValue2);
+			return Exists(where);
+		}}
+
+		/// <summary>
+		/// 是否存在该记录
+		/// </summary>
+		public static bool Exists(string columnName1, object columnValue1, string columnName2, object columnValue2, string columnName3, object columnValue3)
+		{{
+			Dictionary<string, object> where = new Dictionary<string, object>();
+            where.Add(columnName1, columnValue1);
+			where.Add(columnName2, columnValue2);
+			where.Add(columnName3, columnValue3);
+			return Exists(where);
+		}}
+
+		/// <summary>
+		/// 得到最大ID
+		/// </summary>
+		public static int GetMaxId(string where)
+		{{
+			return DatabaseFactory.CreateDatabase().GetMaxID("{2}", "{0}", where); 
+		}}

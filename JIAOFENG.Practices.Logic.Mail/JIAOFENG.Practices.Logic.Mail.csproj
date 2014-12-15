@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BE0CAA3A-5940-47A4-B5C5-D9D341A1FA66}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dashinginfo.Practices.Logic.Mail</RootNamespace>
+    <AssemblyName>Dashinginfo.Practices.Logic.Mail</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\TD-会员\04-Code\packages\DashingDLL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dal\IMailPushDal.cs" />
+    <Compile Include="Dal\MailReceiveDal.cs" />
+    <Compile Include="Dal\MailPushDal.cs" />
+    <Compile Include="Dal\MySQLMailSendDal.cs" />
+    <Compile Include="Dal\OracleMailSendDal.cs" />
+    <Compile Include="Dal\SqlServerMailSendDal.cs" />
+    <Compile Include="Entity\InMailMessageEntity.cs" />
+    <Compile Include="Entity\OutMailMessageEntity.cs" />
+    <Compile Include="MailReceiveManager.cs" />
+    <Compile Include="MailManager.cs" />
+    <Compile Include="Enum.cs" />
+    <Compile Include="InMailMessage.cs" />
+    <Compile Include="OutMailMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dashinginfo.Practices.Database\JIAOFENG.Practices.Database.csproj">
+      <Project>{d14e25d0-f75c-4c96-9ad4-101dbe1c5c5d}</Project>
+      <Name>JIAOFENG.Practices.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dashinginfo.Practices.Library\JIAOFENG.Practices.Library.csproj">
+      <Project>{86cd6421-de7a-423e-a80d-ee58a34d125e}</Project>
+      <Name>JIAOFENG.Practices.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dashinginfo.Practices.Logic.File\JIAOFENG.Practices.Logic.File.csproj">
+      <Project>{d66cde91-4df0-46f4-91ab-7164f6623393}</Project>
+      <Name>JIAOFENG.Practices.Logic.File</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dashinginfo.Practices.Resources\JIAOFENG.Practices.Resources.csproj">
+      <Project>{7a01d2c7-8c5c-43e6-bbb8-9125fe37cb11}</Project>
+      <Name>JIAOFENG.Practices.Resources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,5 @@
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Mail\Dashinginfo.Practice.Mail\bin\Debug\Dashinginfo.Practice.Mail.dll
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Mail\Dashinginfo.Practice.Mail\bin\Debug\Dashinginfo.Practice.Mail.pdb
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Mail\Dashinginfo.Practice.Mail\obj\Debug\JIAOFENG.Practices.Mail.csprojResolveAssemblyReference.cache
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Mail\Dashinginfo.Practice.Mail\obj\Debug\Dashinginfo.Practice.Mail.dll
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Mail\Dashinginfo.Practice.Mail\obj\Debug\Dashinginfo.Practice.Mail.pdb

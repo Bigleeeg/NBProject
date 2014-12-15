@@ -1,0 +1,9 @@
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Resources\bin\Debug\Dashinginfo.Practices.Resources.dll
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Resources\bin\Debug\Dashinginfo.Practices.Resources.pdb
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Resources\bin\Debug\zh-CN\Dashinginfo.Practices.Resources.resources.dll
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Resources\obj\Debug\Dashinginfo.Practices.Resources.Resource.resources
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Resources\obj\Debug\Dashinginfo.Practices.Resources.Resource.zh-CN.resources
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Resources\obj\Debug\JIAOFENG.Practices.Resources.csproj.GenerateResource.Cache
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Resources\obj\Debug\zh-CN\Dashinginfo.Practices.Resources.resources.dll
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Resources\obj\Debug\Dashinginfo.Practices.Resources.dll
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Resources\obj\Debug\Dashinginfo.Practices.Resources.pdb

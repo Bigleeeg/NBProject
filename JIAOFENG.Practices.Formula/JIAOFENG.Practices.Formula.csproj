@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E70D8A48-40BE-4069-8EAC-0525CE4055B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dashinginfo.Practices.Formula</RootNamespace>
+    <AssemblyName>Dashinginfo.Practices.Formula</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppExtension.cs" />
+    <Compile Include="Implementation\AbsExpression.cs" />
+    <Compile Include="Implementation\AcosExpression.cs" />
+    <Compile Include="Implementation\AndExpression.cs" />
+    <Compile Include="Implementation\AndFuncExpression.cs" />
+    <Compile Include="Implementation\ArithmeticFuncExpression.cs" />
+    <Compile Include="Implementation\ArithmeticSymbolExpression.cs" />
+    <Compile Include="Implementation\AsinExpression.cs" />
+    <Compile Include="Implementation\Atan2Expression.cs" />
+    <Compile Include="Implementation\AtanExpression.cs" />
+    <Compile Include="Calculator.cs" />
+    <Compile Include="Implementation\CallExpression.cs" />
+    <Compile Include="Implementation\CommaExpression.cs" />
+    <Compile Include="Implementation\CompareExpression.cs" />
+    <Compile Include="Implementation\CosExpression.cs" />
+    <Compile Include="Implementation\CountExpression.cs" />
+    <Compile Include="Implementation\DelegateExpression.cs" />
+    <Compile Include="Implementation\DivideExpression.cs" />
+    <Compile Include="Implementation\EnMonthExpression.cs" />
+    <Compile Include="Implementation\EqualExpression.cs" />
+    <Compile Include="Expression.cs" />
+    <Compile Include="ExpressionFactory.cs" />
+    <Compile Include="ExpressionPreprocessor.cs" />
+    <Compile Include="Implementation\FalseValueExpression.cs" />
+    <Compile Include="Implementation\FuncExpression.cs" />
+    <Compile Include="Implementation\GreatOrEqualExpression.cs" />
+    <Compile Include="Implementation\GreatThanExpression.cs" />
+    <Compile Include="Implementation\IfExpression.cs" />
+    <Compile Include="Implementation\LeftBracketExpression.cs" />
+    <Compile Include="Implementation\LeftExpression.cs" />
+    <Compile Include="Implementation\LessOrEqualExpression.cs" />
+    <Compile Include="Implementation\LessThanExpression.cs" />
+    <Compile Include="Implementation\LogicExpression.cs" />
+    <Compile Include="Implementation\LogicFuncExpression.cs" />
+    <Compile Include="Implementation\LookUpExpression.cs" />
+    <Compile Include="Implementation\MaxExpression.cs" />
+    <Compile Include="Implementation\MidExpression.cs" />
+    <Compile Include="Implementation\MinExpression.cs" />
+    <Compile Include="Implementation\MinusExpression.cs" />
+    <Compile Include="Implementation\ModExpression.cs" />
+    <Compile Include="Implementation\MonthExpression.cs" />
+    <Compile Include="Implementation\MultiplyExpression.cs" />
+    <Compile Include="Implementation\NotEqualExpression.cs" />
+    <Compile Include="Implementation\NotExpression.cs" />
+    <Compile Include="Implementation\NotFuncExpression.cs" />
+    <Compile Include="NumberExpressionFactory.cs" />
+    <Compile Include="OperateTypeEnum.cs" />
+    <Compile Include="Implementation\OrExpression.cs" />
+    <Compile Include="Implementation\OrFuncExpression.cs" />
+    <Compile Include="Implementation\PIValueExpression.cs" />
+    <Compile Include="Implementation\PlusExpression.cs" />
+    <Compile Include="Implementation\PowExpression.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Implementation\RightBracketExpression.cs" />
+    <Compile Include="Implementation\RightExpression.cs" />
+    <Compile Include="Implementation\RoundExpression.cs" />
+    <Compile Include="Implementation\ScoreExpression.cs" />
+    <Compile Include="Implementation\SeparatorExpression.cs" />
+    <Compile Include="Implementation\SinExpression.cs" />
+    <Compile Include="Implementation\StringExpressionFactory.cs" />
+    <Compile Include="Implementation\StringFuncExpression.cs" />
+    <Compile Include="Implementation\SumExpression.cs" />
+    <Compile Include="Implementation\SymbolExpression.cs" />
+    <Compile Include="SymbolExpressionFactory.cs" />
+    <Compile Include="Implementation\SyntaxException.cs" />
+    <Compile Include="SyntaxTreeAnalyse.cs" />
+    <Compile Include="Implementation\TanExpression.cs" />
+    <Compile Include="Implementation\ToStringExpression.cs" />
+    <Compile Include="Implementation\TrueValueExpression.cs" />
+    <Compile Include="Implementation\ValueExpression.cs" />
+    <Compile Include="Implementation\VarExpression.cs" />
+    <Compile Include="Implementation\VarExpressionFactory.cs" />
+    <Compile Include="Implementation\XorExpression.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Expression.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dashinginfo.Practices.Library\JIAOFENG.Practices.Library.csproj">
+      <Project>{86cd6421-de7a-423e-a80d-ee58a34d125e}</Project>
+      <Name>JIAOFENG.Practices.Library</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

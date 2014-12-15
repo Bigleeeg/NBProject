@@ -1,0 +1,17 @@
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Database\bin\Debug\Dashinginfo.Practices.Database.dll
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Database\bin\Debug\Dashinginfo.Practices.Database.pdb
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Database\bin\Debug\Dashinginfo.Practices.Library.dll
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Database\bin\Debug\MySql.Data.dll
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Database\bin\Debug\NPOI.dll
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Database\bin\Debug\NPOI.OOXML.dll
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Database\bin\Debug\itextsharp.dll
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Database\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Database\bin\Debug\NPOI.OpenXmlFormats.dll
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Database\bin\Debug\NPOI.OpenXml4Net.dll
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Database\bin\Debug\Dashinginfo.Practices.Library.pdb
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Database\bin\Debug\NPOI.xml
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Database\bin\Debug\NPOI.OOXML.xml
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Database\bin\Debug\NPOI.OpenXml4Net.xml
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Database\obj\Debug\JIAOFENG.Practices.Database.csprojResolveAssemblyReference.cache
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Database\obj\Debug\Dashinginfo.Practices.Database.dll
+E:\类库和代码生成器\V4\Dashinginfo.Practices.Database\obj\Debug\Dashinginfo.Practices.Database.pdb

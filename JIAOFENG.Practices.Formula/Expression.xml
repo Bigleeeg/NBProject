@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Expression>
+  <ExpressionKeyword>
+    <!--以下字符串处理函数公式对象-->
+    <Expression Word="mid" Class="MidExpression" Example="mid('abcdefg',2,3) = 'bcd'" />
+    <Expression Word="left" Class="LeftExpression" Example="left('abcdefg',5) = 'abcde'" />
+    <Expression Word="right" Class="RightExpression" Example="right('abcdefg',5) = 'cdefg'" />
+    <Expression Word="string" Class="ToStringExpression" Example="string(53.6) = '53.6'" />
+    <!--以下为数学运算公式对象--> 
+    <Expression Word="abs" Class="AbsExpression" Example="abs(-5) = 5" />
+    <Expression Word="max" Class="MaxExpression" Example="max(3,5,2) = 5" />
+    <Expression Word="min" Class="MinExpression" Example="min(3,5,6,10) = 3" />
+    <Expression Word="round" Class="RoundExpression" Example="round(0.12345,3) = 0.123" />
+    <Expression Word="pow" Class="PowExpression" Example="pow(2,3) = 8" />
+    <!--以下为三角函数公式对象，均采用角度计算而非弧度-->
+    <Expression Word="sin" Class="SinExpression" Example="sin(30) = 0.5" />
+    <Expression Word="cos" Class="CosExpression" Example="cos(60) = 0.5" />
+    <Expression Word="asin" Class="AsinExpression" Example="asin(0.5) = 30" />   
+    <Expression Word="acos" Class="AcosExpression" Example="acos(0.5) = 60" />
+    <Expression Word="tan" Class="TanExpression" Example="tan(45) = 1" />
+    <Expression Word="atan" Class="AtanExpression" Example="atan(1) = 45" />
+    <Expression Word="atan2" Class="Atan2Expression" Example="atan2(30,30) = 45" />
+    <!--以下为逻辑运算公式对象-->
+    <Expression Word="and" Class="AndFuncExpression" Example="and(true,false) = false" />
+    <Expression Word="or" Class="OrFuncExpression" Example="or(true,false) = true" />
+    <Expression Word="not" Class="NotFuncExpression" Example="not(true) = false" />
+    <Expression Word="xor" Class="XorExpression" Example="xor(true,false) = true" />
+    <!--以下为常量公式对象-->
+    <Expression Word="pi" Class="PIValueExpression" Example="pi*1 = 3.1415926" />
+    <!--<Expression Word="e" Class="ValueExpression" Example="e*1 = 2.71828" />-->
+    <Expression Word="true" Class="TrueValueExpression" Example="and(true,false) = false" />
+    <Expression Word="false" Class="FalseValueExpression" Example="and(true,false) = false" />
+    <!--以下日期运算公式对象-->
+    <Expression Word="toMonth" Class="MonthExpression" Example="toMonth('05/31/2012') = 5" />
+    <Expression Word="toEnMonth" Class="EnMonthExpression" Example="toEnMonth(5) = 'May'" />
+    <!--以下为其他公式对象-->
+    <Expression Word="if" Class="IfExpression" Example="if(3>5,12,24) = 24" />
+    <Expression Word="sum" Class="SumExpression" Example="sum(A) = 24" />
+    <Expression Word="count" Class="CountExpression" Example="count(A) = 24" />
+    <!--<Expression Word="lookup" Class="LookUpExpression" Example="lookup('Beijing', 'CityScore', 1, 2) = 5" />-->
+    <Expression Word="score" Class="ScoreExpression" Example="score(65, &quot;[0,'不及格',60)[60,'及格',70)[70,'中',85)[85,'优秀',100]&quot;) = '及格'" />
+    <!--<Expression Word="call" Class="CallExpression" Example="Call('NameSpace.Membership','Login','Admin','password') = true" />-->
+  </ExpressionKeyword>
+  <ExpressionSymbol>
+    <!--以下为分隔符-->
+    <Expression Word="(" Class="LeftBracketExpression" Example="2*(5-3) = 4" />
+    <Expression Word=")" Class="RightBracketExpression" Example="2*(5-3) = 4" />
+    <Expression Word="," Class="CommaExpression" Example="left('abcdefg',5) = 'abcde'" />
+    <!--以下为数学运算符-->
+    <Expression Word="+" Class="PlusExpression" Example="2+3 = 5" />
+    <Expression Word="-" Class="MinusExpression" Example="5-3 = 2" />
+    <Expression Word="*" Class="MultiplyExpression" Example="3*4 = 12" />
+    <Expression Word="/" Class="DivideExpression" Example="8/2 = 4" />
+    <Expression Word="%" Class="ModExpression" Example="5.4%2 = 1.4" />
+    <!--以下为比较运算符-->
+    <Expression Word="=" Class="EqualExpression" Example="if(3=5,12,24) = 24" />
+    <Expression Word="==" Class="EqualExpression" Example="if(3==5,12,24) = 24" />
+    <Expression Word="&lt;>" Class="NotEqualExpression" Example="if(3&lt;>5,12,24) = 12" />
+    <Expression Word="!=" Class="NotEqualExpression" Example="if(3!=5,12,24) = 12" />
+    <Expression Word=">" Class="GreatThanExpression" Example="if(3>5,12,24) = 24" />
+    <Expression Word=">=" Class="GreatOrEqualExpression" Example="if(3>=5,12,24) = 24" />
+    <Expression Word="&lt;" Class="LessThanExpression" Example="if(3&lt;5,12,24) = 12" />
+    <Expression Word="&lt;=" Class="LessOrEqualExpression" Example="if(3&lt;=5,12,24) = 12" />
+    <!--以下为逻辑运算符-->
+    <Expression Word="!" Class="NotExpression" Example="!true = false" />
+    <Expression Word="&amp;" Class="AndExpression" Example="true &amp; false = false" />
+    <Expression Word="&amp;&amp;" Class="AndExpression" Example="true &amp;&amp; false = false" />
+    <Expression Word="|" Class="OrExpression" Example="true | false = true" />
+    <Expression Word="||" Class="OrExpression" Example="true || false = true" />
+  </ExpressionSymbol>
+</Expression>

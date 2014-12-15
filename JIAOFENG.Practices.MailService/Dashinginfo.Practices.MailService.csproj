@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2055CA11-899B-4418-83BD-2A012401ECBA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dashinginfo.Practices.MailService</RootNamespace>
+    <AssemblyName>Dashinginfo.Practices.MailService</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constant.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="CoreService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CoreService.Designer.cs">
+      <DependentUpon>CoreService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MailSmtpClient.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjectInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProjectInstaller.Designer.cs">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Install_x64.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Install_x86.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Uninstall_x64.bat" />
+    <None Include="Uninstall_x86.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Config.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoreService.resx">
+      <DependentUpon>CoreService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectInstaller.resx">
+      <DependentUpon>ProjectInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\TD-会员\04-Code\Dashinginfo.Practices.Logic.File\Dashinginfo.Practices.Logic.File.csproj">
+      <Project>{d66cde91-4df0-46f4-91ab-7164f6623393}</Project>
+      <Name>Dashinginfo.Practices.Logic.File</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dashinginfo.Practices.Database\Dashinginfo.Practices.Database.csproj">
+      <Project>{d14e25d0-f75c-4c96-9ad4-101dbe1c5c5d}</Project>
+      <Name>Dashinginfo.Practices.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dashinginfo.Practices.Library\Dashinginfo.Practices.Library.csproj">
+      <Project>{86cd6421-de7a-423e-a80d-ee58a34d125e}</Project>
+      <Name>Dashinginfo.Practices.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dashinginfo.Practices.Logic.Log\Dashinginfo.Practices.Logic.Log.csproj">
+      <Project>{10ee8508-b595-4de5-8923-d3ce4d0087fe}</Project>
+      <Name>Dashinginfo.Practices.Logic.Log</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dashinginfo.Practices.Logic.Mail\Dashinginfo.Practices.Logic.Mail.csproj">
+      <Project>{be0caa3a-5940-47a4-b5c5-d9d341a1fa66}</Project>
+      <Name>Dashinginfo.Practices.Logic.Mail</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dashinginfo.Practices.Mail\Dashinginfo.Practice.Mail\Dashinginfo.Practices.Mail.csproj">
+      <Project>{19a3a86c-ec35-47d2-94db-c0bcfc9d770c}</Project>
+      <Name>Dashinginfo.Practices.Mail</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

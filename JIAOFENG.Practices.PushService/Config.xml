@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MailConfiguration>
+  <!--Timer的检测时间，现为1分钟-->
+  <TimerInterval value="1"/>
+  <!--失败重试次数-->
+  <FailMostNum value="5"/>
+  <!--5的n倍阶乘：5的0次方=1开始，1，5，25，75，375-->
+  <FailRetryIntervalPow value="5"/>
+  <Clients>
+    <Client>
+      <!--数据源类型与连接字符串-->
+      <Provider providerType="MySQL" connectionString="Server=www.dashinginfo.com;Port=3336;User ID=root;Password=dashing123!;DATABASE=customermanagement; pooling=true;"/>
+      <Mail enabled="true">
+        <Send enabled="true">
+          <SmtpServer value="smtp.dashinginfo.com"/>
+          <MailAccount value="prj_test@dashinginfo.com"/>
+          <MailPassword value="test123"/>
+          <DefaultSender value="管理员"/>
+        </Send>
+        <Receive enabled="false">
+          <MailHost value="pop3.dashinginfo.com"/>
+          <MailPort value="110"/>
+          <RequireSSL value="false"/>
+          <MailAccount value="prj_test@dashinginfo.com"/>
+          <MailPassword value="test123"/>
+          <MailAssembly value="JIAOFENG.Practices.Mail"/>
+          <MailReceive value="JIAOFENG.Practices.Mail.Pop3.Pop3Client"/>
+        </Receive>
+      </Mail>
+      <WechatPush enabled="false">
+        <TemplateMessageHost value="https://api.weixin.qq.com/cgi-bin/message/template/send?access_token={0}"/>
+        <ClientAccessTokenUrl value="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&amp;appid={0}&amp;secret={1}"/>
+        <WechatAppId value="wx11480b0439f7ce87"/>
+        <AppSecret value="e90a00da06f3a6fb06fab36d3a51e5a7"/>
+      </WechatPush>
+      <AppPush enabled="true">
+        <AppId value="HdClMguRhC8Dm8mTUMKjE8"/>
+        <AppKey value="MKswFduM9M6pVUxqx1U8b7"/>
+        <MasterSecret value="YUKIw1RjMq9LSDcgCiXxq6"/>
+        <Host value="http://sdk.open.api.igexin.com/apiex.htm"/>
+      </AppPush>
+    </Client>
+  </Clients>
+</MailConfiguration>

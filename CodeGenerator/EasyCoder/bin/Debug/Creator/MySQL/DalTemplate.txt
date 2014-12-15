@@ -1,0 +1,32 @@
+﻿using System; 
+using System.Collections.Generic; 
+using System.Linq; 
+using System.Text; 
+using System.Data; 
+using System.Data.Common;
+using MySql.Data.MySqlClient;
+using JIAOFENG.Practices.Database; 
+using JIAOFENG.Practices.Library.Common;
+using {0}.PersisterceEntity; 
+
+namespace {0}.Dal
+{{
+    public static partial class {1}Dal
+    {{
+	    #region add 
+{2}
+		#endregion 
+
+		#region delete
+{3}
+		#endregion 
+
+		#region update
+{4}
+		#endregion 
+
+		#region search
+{5}
+		#endregion 
+    }}
+}}

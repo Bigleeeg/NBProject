@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MailConfiguration>
+  <!--Timer的检测时间，现为1分钟-->
+  <TimerInterval value="1"/>
+  <!--失败重试次数-->
+  <FailMostNum value="5"/>
+  <!--5的n倍阶乘：5的0次方=1开始，1，5，25，75，375-->
+  <FailRetryIntervalPow value="5"/>
+  <Clients>
+    <Client>
+      <!--数据源类型与连接字符串-->
+      <Provider providerType="SqlServer" connectionString="data source=192.168.1.254;initial catalog=BudgetToolNew;User id=budgettool;Pwd=budgettool"/>
+      <Mail>
+        <Send enabled="true">
+          <SmtpServer value="smtp.dashinginfo.com"/>
+          <MailAccount value="prj_test@dashinginfo.com"/>
+          <MailPassword value="test123"/>
+          <DefaultSender value="管理员"/>
+        </Send>
+        <Receive enabled="false">
+          <MailHost value="pop3.dashinginfo.com"/>
+          <MailPort value="110"/>
+          <RequireSSL value="false"/>
+          <MailAccount value="prj_test@dashinginfo.com"/>
+          <MailPassword value="test123"/>
+          <MailAssembly value="Dashinginfo.Practices.Mail"/>
+          <MailReceive value="Dashinginfo.Practices.Mail.Pop3.Pop3Client"/>
+        </Receive>
+      </Mail>
+      <WechatPush>
+        
+      </WechatPush>
+      <AppPush>
+        
+      </AppPush>
+    </Client>
+  </Clients>
+</MailConfiguration>

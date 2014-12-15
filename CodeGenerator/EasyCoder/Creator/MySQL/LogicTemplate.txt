@@ -1,0 +1,218 @@
+﻿using System; 
+using System.Collections.Generic; 
+using System.Linq; 
+using System.Text; 
+using System.Data; 
+using System.Data.SqlClient; 
+using {0}.Entity; 
+using {0}.Dal;
+using Dashinginfo.Practices.Library.Common;
+
+namespace {0}.Logic
+{{
+    public partial class {1}Logic
+    {{
+	    #region add 
+		/// <summary>
+		/// 添加记录
+		/// </summary>
+		public {1} Add({1} entity)
+		{{
+			return {1}Dal.Add(entity);
+		}}
+		/// <summary>
+		/// 批量添加记录
+		/// </summary>
+		public static void Add(List<{1}> entities)
+		{{
+			{1}Dal.Add(entities);
+		}}
+		#endregion 
+
+		#region delete
+		/// <summary>
+		/// 根据主键ID字符串真删除多条数据
+		/// </summary>
+		public bool DeleteActual(int id)
+		{{
+			return {1}Dal.DeleteActual(id.ToString());
+		}}
+		/// <summary>
+		/// 根据筛选条件真删除多条数据
+		/// </summary>
+		public bool DeleteActual(List<int> ids)
+		{{
+			return {1}Dal.DeleteActual(string.Join(",", ids));
+		}}
+		/// <summary>
+		/// 根据筛选条件真删除多条数据
+		/// </summary>
+		public bool DeleteActual(int[] ids)
+		{{
+			return {1}Dal.DeleteActual(string.Join(",", ids));
+		}}
+		/// <summary>
+		/// 根据主键ID字符串假删除一条数据
+		/// </summary>
+		public bool Delete(int id, int operatorer)
+		{{
+			return {1}Dal.Delete(id.ToString(), operatorer);
+		}}
+		/// <summary>
+		/// 根据主键ID集合假删除多条数据
+		/// </summary>
+		public bool Delete(List<int> ids, int operatorer)
+		{{
+			return {1}Dal.Delete(string.Join(",", ids), operatorer);
+		}}
+		/// <summary>
+		/// 根据主键ID集合假删除多条数据
+		/// </summary>
+		public bool Delete(int[] ids, int operatorer)
+		{{
+			return {1}Dal.Delete(string.Join(",", ids), operatorer);
+		}}
+		#endregion 
+
+		#region update
+		/// <summary>
+		/// 更新记录
+		/// </summary>
+		public bool Update({1} entity)
+		{{
+			return {1}Dal.Update(entity);
+		}}
+		/// <summary>
+		/// 批量更新记录
+		/// </summary>
+		public static void Update(List<{1}> entities)
+		{{
+			{1}Dal.Update(entities);
+		}}
+		#endregion 
+
+		#region search
+		/// <summary>
+		/// 得到一个对象实体
+		/// </summary>
+		public {1} GetEntityByID(int id)
+		{{
+			return {1}Dal.GetEntityByID(id);
+		}}
+		/// <summary>
+		/// 得到多个对象实体
+		/// </summary>
+		public List<{1}> GetListByID(List<int> ids)
+		{{
+			return {1}Dal.GetListByIDs(string.Join(",", ids));
+		}}
+		/// <summary>
+		/// 得到多个对象实体
+		/// </summary>
+		public List<{1}> GetListByID(int[] ids)
+		{{
+			return {1}Dal.GetListByIDs(string.Join(",", ids));
+		}}
+
+		private List<{1}> GetList(string where)
+		{{
+			return {1}Dal.GetList(where);
+		}}
+
+		/// <summary>
+		/// 得到多个对象实体
+		/// </summary>
+		public List<{1}> GetListAll(bool containDeleted = false)
+		{{			
+		    return {1}Dal.GetListAll(containDeleted);
+		}}
+
+		/// <summary>
+		/// 得到多个对象实体
+		/// </summary>
+		private DataSet GetDataSet(string where)
+		{{			
+		    return {1}Dal.GetDataSet(where);
+		}}
+
+		/// <summary>
+		/// 获取DataSet
+		/// </summary>
+		private DataSet GetDataSet(Dictionary<string, object> where)
+		{{						 
+			 return {1}Dal.GetDataSet(where);
+		}}
+
+		/// <summary>
+		/// 得到多个对象实体
+		/// </summary>
+		private List<{1}> GetList(Dictionary<string, object> where)
+		{{		
+		    return {1}Dal.GetList(where);
+		}}
+
+		/// <summary>
+		/// 得到多个对象实体
+		/// </summary>
+		public DataSet GetDataSetAll(bool containDeleted = false)
+		{{			
+		    return {1}Dal.GetDataSetAll(containDeleted);
+		}}
+		private PagedTable ExecutePagedTable(string commandText, string orderBy, int pageIndex, int pageSize, params SqlParameter[] commandParameters)
+		{{
+			return {1}Dal.ExecutePagedTable(commandText, orderBy, pageIndex, pageSize, commandParameters);
+		}}
+		private PagedList<{1}> GetPagedList(string commandText, string orderBy, int pageIndex, int pageSize, params SqlParameter[] commandParameters)
+		{{
+			return {1}Dal.GetPagedList(commandText, orderBy, pageIndex, pageSize, commandParameters);
+		}}
+
+		private int GetRecordCount(string where)
+		{{
+			return {1}Dal.GetRecordCount(where);
+		}}
+
+		/// <summary>
+		/// 是否存在该记录
+		/// </summary>
+		public bool Exists(int id)
+		{{
+			return {1}Dal.Exists(id);
+		}}
+
+		/// <summary>
+		/// 是否存在该记录
+		/// </summary>
+		private bool Exists(string columnName, object columnValue)
+		{{
+			return {1}Dal.Exists(columnName, columnValue);
+		}}
+
+		/// <summary>
+		/// 是否存在该记录
+		/// </summary>
+		private bool Exists(string columnName1, object columnValue1, string columnName2, object columnValue2)
+		{{
+			return {1}Dal.Exists(columnName1, columnValue1, columnName2, columnValue2);
+		}}
+
+		/// <summary>
+		/// 是否存在该记录
+		/// </summary>
+		private bool Exists(string columnName1, object columnValue1, string columnName2, object columnValue2, string columnName3, object columnValue3)
+		{{
+			return {1}Dal.Exists(columnName1, columnValue1, columnName2, columnValue2, columnName3, columnValue3);
+		}}
+
+		private int GetMaxId(string where)
+		{{
+			return {1}Dal.GetMaxId(where);
+		}}
+
+		public int GetMaxId()
+		{{
+			return {1}Dal.GetMaxId(null);
+		}}
+		#endregion 
+    }}
+}}

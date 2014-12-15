@@ -1,0 +1,79 @@
+﻿		/// <summary>
+		/// 根据主键ID字符串真删除多条数据
+		/// </summary>
+		public static bool Delete(string ids)
+		{{
+			if(string.IsNullOrWhiteSpace(ids))
+			{{
+				return true;
+			}}
+			bool result = false;
+			string sql = "DELETE FROM [{0}] WHERE {1} IN (" + ids + ")";
+			result = DatabaseFactory.CreateDatabase().ExecuteNonQuery(sql) > 0 ? true : false;
+			return result;
+		}}
+
+		/// <summary>
+		/// 根据筛选条件真删除多条数据
+		/// </summary>
+		public static bool Delete(Dictionary<string, object> where)
+		{{			
+		     bool result = false;			 
+			 string columns = string.Empty;
+			 List<System.Data.OracleClient.OracleParameter> oraParameterList = new List<System.Data.OracleClient.OracleParameter>();
+             foreach (string key in where.Keys)
+             {{
+                 columns += " and [" + key + "]=" + ":" + key;
+                 oraParameterList.Add(new System.Data.OracleClient.OracleParameter(":" + key, where[key]));
+             }}
+			 string sql = "DELETE from [{0}] where 1=1" + columns;
+			 result =  DatabaseFactory.CreateDatabase().ExecuteNonQuery(CommandType.Text, sql, oraParameterList.ToArray()) > 0 ? true : false;
+	
+			 return result;
+		}}
+
+		/// <summary>
+		/// 根据筛选条件真删除多条数据
+		/// </summary>
+		public static bool Delete(string columnName, object columnValue)
+		{{			
+		    Dictionary<string, object> where = new Dictionary<string, object>();
+            where.Add(columnName, columnValue);
+			return Delete(where);
+		}}
+
+		/// <summary>
+		/// 根据筛选条件真删除多条数据
+		/// </summary>
+		public static bool Delete(string columnName1, object columnValue1, string columnName2, object columnValue2, string columnName3, object columnValue3)
+		{{			
+		    Dictionary<string, object> where = new Dictionary<string, object>();
+            where.Add(columnName1, columnValue1);
+			where.Add(columnName2, columnValue2);
+			where.Add(columnName3, columnValue3);
+			return Delete(where);
+		}}
+
+		/// <summary>
+		/// 根据主键ID真删除一条数据
+		/// </summary>
+		public static bool Delete(int id)
+		{{
+			return Delete(id.ToString());
+		}}
+
+		/// <summary>
+		/// 根据主键ID集合真删除多条数据
+		/// </summary>
+		public static bool Delete(List<int> ids)
+		{{
+			return Delete(string.Join(",", ids));
+		}}
+
+		/// <summary>
+		/// 根据主键ID集合真删除多条数据
+		/// </summary>
+		public static bool Delete(int[] ids)
+		{{
+			return Delete(string.Join(",", ids));
+		}}

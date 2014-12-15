@@ -1,0 +1,3 @@
+include:some basic functions can be used in OA system & a tool to create code that can be used in the DAL.
+
+forgive my bad English...

@@ -1,0 +1,52 @@
+﻿		/// <summary>
+		/// 更新记录
+		/// </summary>
+		public static bool Update({0}Entity entity)
+		{{
+			bool result = false;
+			string sql = "Update `{6}` set {1} where {2}";
+
+			List<MySql.Data.MySqlClient.MySqlParameter> sqlParameterList = new List<MySqlParameter>();
+{3}
+
+			result =  DatabaseFactory.CreateDatabase().ExecuteNonQuery(CommandType.Text, sql, sqlParameterList.ToArray()) > 0 ? true : false;
+			return result;
+		}}
+		private static void UpdateBatch(List<{0}Entity> entities)
+        {{
+		    if (entities == null || entities.Count == 0)
+			{{
+				return;
+			}}
+			const string sqlFormat = "Update `{6}` set {{0}} where {{1}};";
+            string sql = string.Empty;
+            int index = 0;
+			string currentParameter = string.Empty;
+            List<MySql.Data.MySqlClient.MySqlParameter> sqlParameterList = new List<MySqlParameter>();
+            foreach({0}Entity entity in entities)
+            {{
+                string valuesParas = string.Empty;
+				string wherePara = string.Empty;
+{4}
+                valuesParas = valuesParas.Substring(1);
+                sql = sql + string.Format(sqlFormat, valuesParas,wherePara);
+				index++;
+            }}
+            
+            DatabaseFactory.CreateDatabase().ExecuteNonQuery(CommandType.Text, sql, sqlParameterList.ToArray());
+        }}
+		/// <summary>
+		/// 批量更新记录
+		/// </summary>
+		public static void Update(List<{0}Entity> entities)
+        {{
+            int i = 0;
+            const int size = {5};
+            do
+            {{
+                List<{0}Entity> contents = entities.Skip(i * size).Take(size).ToList();
+                UpdateBatch(contents);
+                i++;
+            }} while (i * size < entities.Count);
+
+        }}
