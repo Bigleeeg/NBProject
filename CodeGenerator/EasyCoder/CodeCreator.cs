@@ -65,7 +65,7 @@ namespace EasyCoder
                     //TO DO MYSQL                     
                     IDbAccess mysql = new MySQLAccess();
                     string sqlText = "SHOW tables";
-                    this.connectionString = @"Server=" + this.txtip.Text + ";Port=3336;User ID=" + this.txtuserid.Text
+                    this.connectionString = @"Server=" + this.txtip.Text + ";Port=3306;User ID=" + this.txtuserid.Text
                         + ";Password=" + this.txtpassword.Text + ";DATABASE=" + this.cbbdatabase.SelectedItem.ToString(); 
                     mysql.ConnectionString = this.connectionString;
                     dt = mysql.Query(sqlText);
@@ -199,7 +199,7 @@ namespace EasyCoder
                     //TO DO MySQL
                     IDbAccess mysql = new MySQLAccess();
                     string sqlText = @"show databases";
-                    this.connectionString = @"Server=" + this.txtip.Text + ";Port=3336;" + "User ID=" + this.txtuserid.Text
+                    this.connectionString = @"Server=" + this.txtip.Text + ";Port=3306;" + "User ID=" + this.txtuserid.Text
                         + ";Password=" + this.txtpassword.Text;
                     mysql.ConnectionString = this.connectionString;
                     dt = mysql.Query(sqlText);
