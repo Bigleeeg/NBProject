@@ -3,31 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Library", "Dashinginfo.Practices.Library\JIAOFENG.Practices.Library.csproj", "{86CD6421-DE7A-423E-A80D-EE58A34D125E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Library", "JIAOFENG.Practices.Library\JIAOFENG.Practices.Library.csproj", "{86CD6421-DE7A-423E-A80D-EE58A34D125E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Library.Mvc", "Dashinginfo.Practices.Library.Mvc\JIAOFENG.Practices.Library.Mvc.csproj", "{6CC4B2EC-216B-465F-9CAA-4B22D27498F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Library.Mvc", "JIAOFENG.Practices.Library.Mvc\JIAOFENG.Practices.Library.Mvc.csproj", "{6CC4B2EC-216B-465F-9CAA-4B22D27498F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Database", "Dashinginfo.Practices.Database\JIAOFENG.Practices.Database.csproj", "{D14E25D0-F75C-4C96-9AD4-101DBE1C5C5D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Database", "JIAOFENG.Practices.Database\JIAOFENG.Practices.Database.csproj", "{D14E25D0-F75C-4C96-9AD4-101DBE1C5C5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Formula", "Dashinginfo.Practices.Formula\JIAOFENG.Practices.Formula.csproj", "{E70D8A48-40BE-4069-8EAC-0525CE4055B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Formula", "JIAOFENG.Practices.Formula\JIAOFENG.Practices.Formula.csproj", "{E70D8A48-40BE-4069-8EAC-0525CE4055B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Logic.Log", "Dashinginfo.Practices.Logic.Log\JIAOFENG.Practices.Logic.Log.csproj", "{10EE8508-B595-4DE5-8923-D3CE4D0087FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Logic.Log", "JIAOFENG.Practices.Logic.Log\JIAOFENG.Practices.Logic.Log.csproj", "{10EE8508-B595-4DE5-8923-D3CE4D0087FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Logic.Mail", "Dashinginfo.Practices.Logic.Mail\JIAOFENG.Practices.Logic.Mail.csproj", "{BE0CAA3A-5940-47A4-B5C5-D9D341A1FA66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Logic.Mail", "JIAOFENG.Practices.Logic.Mail\JIAOFENG.Practices.Logic.Mail.csproj", "{BE0CAA3A-5940-47A4-B5C5-D9D341A1FA66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Resources", "Dashinginfo.Practices.Resources\JIAOFENG.Practices.Resources.csproj", "{7A01D2C7-8C5C-43E6-BBB8-9125FE37CB11}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Resources", "JIAOFENG.Practices.Resources\JIAOFENG.Practices.Resources.csproj", "{7A01D2C7-8C5C-43E6-BBB8-9125FE37CB11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Mail", "Dashinginfo.Practices.Mail\Dashinginfo.Practice.Mail\JIAOFENG.Practices.Mail.csproj", "{19A3A86C-EC35-47D2-94DB-C0BCFC9D770C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Mail", "JIAOFENG.Practices.Mail\JIAOFENG.Practice.Mail\JIAOFENG.Practices.Mail.csproj", "{19A3A86C-EC35-47D2-94DB-C0BCFC9D770C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{E6E90522-A3C6-480F-B5EA-3D68404A9ED9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.PushService", "Dashinginfo.Practices.PushService\JIAOFENG.Practices.PushService.csproj", "{ADED888E-DCC6-4F48-BEBB-8F38930FB783}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.PushService", "JIAOFENG.Practices.PushService\JIAOFENG.Practices.PushService.csproj", "{ADED888E-DCC6-4F48-BEBB-8F38930FB783}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Logic.AppPush", "Dashinginfo.Practices.Logic.AppPush\JIAOFENG.Practices.Logic.AppPush.csproj", "{7BD32F59-8464-4F70-A139-BFAE6AA83857}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Logic.AppPush", "JIAOFENG.Practices.Logic.AppPush\JIAOFENG.Practices.Logic.AppPush.csproj", "{7BD32F59-8464-4F70-A139-BFAE6AA83857}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Logic.File", "Dashinginfo.Practices.Logic.File\JIAOFENG.Practices.Logic.File.csproj", "{D66CDE91-4DF0-46F4-91AB-7164F6623393}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Logic.File", "JIAOFENG.Practices.Logic.File\JIAOFENG.Practices.Logic.File.csproj", "{D66CDE91-4DF0-46F4-91AB-7164F6623393}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Logic.Wechat", "Dashinginfo.Practices.Logic.Wechat\JIAOFENG.Practices.Logic.Wechat.csproj", "{64A97C2E-D679-410A-B53B-D8E6F85DBD68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JIAOFENG.Practices.Logic.Wechat", "JIAOFENG.Practices.Logic.Wechat\JIAOFENG.Practices.Logic.Wechat.csproj", "{64A97C2E-D679-410A-B53B-D8E6F85DBD68}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

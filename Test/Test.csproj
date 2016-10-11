@@ -53,19 +53,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dashinginfo.Practices.Library\JIAOFENG.Practices.Library.csproj">
+    <ProjectReference Include="..\JIAOFENG.Practices.Library\JIAOFENG.Practices.Library.csproj">
       <Project>{86cd6421-de7a-423e-a80d-ee58a34d125e}</Project>
       <Name>JIAOFENG.Practices.Library</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Dashinginfo.Practices.Logic.AppPush\JIAOFENG.Practices.Logic.AppPush.csproj">
+    <ProjectReference Include="..\JIAOFENG.Practices.Logic.AppPush\JIAOFENG.Practices.Logic.AppPush.csproj">
       <Project>{7bd32f59-8464-4f70-a139-bfae6aa83857}</Project>
       <Name>JIAOFENG.Practices.Logic.AppPush</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Dashinginfo.Practices.Logic.Log\JIAOFENG.Practices.Logic.Log.csproj">
+    <ProjectReference Include="..\JIAOFENG.Practices.Logic.Log\JIAOFENG.Practices.Logic.Log.csproj">
       <Project>{10ee8508-b595-4de5-8923-d3ce4d0087fe}</Project>
       <Name>JIAOFENG.Practices.Logic.Log</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Dashinginfo.Practices.Logic.Wechat\JIAOFENG.Practices.Logic.Wechat.csproj">
+    <ProjectReference Include="..\JIAOFENG.Practices.Logic.Wechat\JIAOFENG.Practices.Logic.Wechat.csproj">
       <Project>{64a97c2e-d679-410a-b53b-d8e6f85dbd68}</Project>
       <Name>JIAOFENG.Practices.Logic.Wechat</Name>
     </ProjectReference>

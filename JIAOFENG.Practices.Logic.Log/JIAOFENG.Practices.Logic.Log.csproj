@@ -73,11 +73,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dashinginfo.Practices.Database\JIAOFENG.Practices.Database.csproj">
+    <ProjectReference Include="..\JIAOFENG.Practices.Database\JIAOFENG.Practices.Database.csproj">
       <Project>{d14e25d0-f75c-4c96-9ad4-101dbe1c5c5d}</Project>
       <Name>JIAOFENG.Practices.Database</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Dashinginfo.Practices.Library\JIAOFENG.Practices.Library.csproj">
+    <ProjectReference Include="..\JIAOFENG.Practices.Library\JIAOFENG.Practices.Library.csproj">
       <Project>{86cd6421-de7a-423e-a80d-ee58a34d125e}</Project>
       <Name>JIAOFENG.Practices.Library</Name>
     </ProjectReference>

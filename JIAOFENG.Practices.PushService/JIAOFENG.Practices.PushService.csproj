@@ -97,35 +97,35 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Dashinginfo.Practices.Database\JIAOFENG.Practices.Database.csproj">
+    <ProjectReference Include="..\JIAOFENG.Practices.Database\JIAOFENG.Practices.Database.csproj">
       <Project>{d14e25d0-f75c-4c96-9ad4-101dbe1c5c5d}</Project>
       <Name>JIAOFENG.Practices.Database</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Dashinginfo.Practices.Library\JIAOFENG.Practices.Library.csproj">
+    <ProjectReference Include="..\JIAOFENG.Practices.Library\JIAOFENG.Practices.Library.csproj">
       <Project>{86cd6421-de7a-423e-a80d-ee58a34d125e}</Project>
       <Name>JIAOFENG.Practices.Library</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Dashinginfo.Practices.Logic.AppPush\JIAOFENG.Practices.Logic.AppPush.csproj">
+    <ProjectReference Include="..\JIAOFENG.Practices.Logic.AppPush\JIAOFENG.Practices.Logic.AppPush.csproj">
       <Project>{7bd32f59-8464-4f70-a139-bfae6aa83857}</Project>
       <Name>JIAOFENG.Practices.Logic.AppPush</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Dashinginfo.Practices.Logic.File\JIAOFENG.Practices.Logic.File.csproj">
+    <ProjectReference Include="..\JIAOFENG.Practices.Logic.File\JIAOFENG.Practices.Logic.File.csproj">
       <Project>{d66cde91-4df0-46f4-91ab-7164f6623393}</Project>
       <Name>JIAOFENG.Practices.Logic.File</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Dashinginfo.Practices.Logic.Log\JIAOFENG.Practices.Logic.Log.csproj">
+    <ProjectReference Include="..\JIAOFENG.Practices.Logic.Log\JIAOFENG.Practices.Logic.Log.csproj">
       <Project>{10ee8508-b595-4de5-8923-d3ce4d0087fe}</Project>
       <Name>JIAOFENG.Practices.Logic.Log</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Dashinginfo.Practices.Logic.Mail\JIAOFENG.Practices.Logic.Mail.csproj">
+    <ProjectReference Include="..\JIAOFENG.Practices.Logic.Mail\JIAOFENG.Practices.Logic.Mail.csproj">
       <Project>{be0caa3a-5940-47a4-b5c5-d9d341a1fa66}</Project>
       <Name>JIAOFENG.Practices.Logic.Mail</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Dashinginfo.Practices.Logic.Wechat\JIAOFENG.Practices.Logic.Wechat.csproj">
+    <ProjectReference Include="..\JIAOFENG.Practices.Logic.Wechat\JIAOFENG.Practices.Logic.Wechat.csproj">
       <Project>{64a97c2e-d679-410a-b53b-d8e6f85dbd68}</Project>
       <Name>JIAOFENG.Practices.Logic.Wechat</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Dashinginfo.Practices.Mail\Dashinginfo.Practice.Mail\JIAOFENG.Practices.Mail.csproj">
+    <ProjectReference Include="..\JIAOFENG.Practices.Mail\JIAOFENG.Practice.Mail\JIAOFENG.Practices.Mail.csproj">
       <Project>{19a3a86c-ec35-47d2-94db-c0bcfc9d770c}</Project>
       <Name>JIAOFENG.Practices.Mail</Name>
     </ProjectReference>
