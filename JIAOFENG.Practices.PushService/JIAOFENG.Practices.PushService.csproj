@@ -7,8 +7,8 @@
     <ProjectGuid>{ADED888E-DCC6-4F48-BEBB-8F38930FB783}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dashinginfo.Practices.PushService</RootNamespace>
-    <AssemblyName>Dashinginfo.Practices.PushService</AssemblyName>
+    <RootNamespace>JIAOFENG.Practices.PushService</RootNamespace>
+    <AssemblyName>JIAOFENG.Practices.PushService</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="GetuiServerApiSDK">
-      <HintPath>..\Dashinginfo.Practices.Logic.AppPush\Dll\GetuiServerApiSDK.dll</HintPath>
+      <HintPath>..\JIAOFENG.Practices.Logic.AppPush\Dll\GetuiServerApiSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />

@@ -7,8 +7,8 @@
     <ProjectGuid>{64A97C2E-D679-410A-B53B-D8E6F85DBD68}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dashinginfo.Practices.Logic.Wechat</RootNamespace>
-    <AssemblyName>Dashinginfo.Practices.Logic.Wechat</AssemblyName>
+    <RootNamespace>JIAOFENG.Practices.Logic.Wechat</RootNamespace>
+    <AssemblyName>JIAOFENG.Practices.Logic.Wechat</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,7 +32,7 @@
   <ItemGroup>
     <Reference Include="MySql.Data, Version=6.9.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Dashinginfo.Practices.Database\DLL\MySql.Data.dll</HintPath>
+      <HintPath>..\JIAOFENG.Practices.Database\DLL\MySql.Data.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

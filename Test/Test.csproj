@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="GetuiServerApiSDK">
-      <HintPath>..\Dashinginfo.Practices.Logic.AppPush\Dll\GetuiServerApiSDK.dll</HintPath>
+      <HintPath>..\JIAOFENG.Practices.Logic.AppPush\Dll\GetuiServerApiSDK.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />

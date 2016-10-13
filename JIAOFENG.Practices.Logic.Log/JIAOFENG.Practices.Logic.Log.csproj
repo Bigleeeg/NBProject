@@ -7,8 +7,8 @@
     <ProjectGuid>{10EE8508-B595-4DE5-8923-D3CE4D0087FE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dashinginfo.Practices.Logic.Log</RootNamespace>
-    <AssemblyName>Dashinginfo.Practices.Logic.Log</AssemblyName>
+    <RootNamespace>JIAOFENG.Practices.Logic.Log</RootNamespace>
+    <AssemblyName>JIAOFENG.Practices.Logic.Log</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

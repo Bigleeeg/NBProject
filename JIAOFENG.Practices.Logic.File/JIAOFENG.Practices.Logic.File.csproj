@@ -7,8 +7,8 @@
     <ProjectGuid>{D66CDE91-4DF0-46F4-91AB-7164F6623393}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dashinginfo.Practices.Logic.File</RootNamespace>
-    <AssemblyName>Dashinginfo.Practices.Logic.File</AssemblyName>
+    <RootNamespace>JIAOFENG.Practices.Logic.File</RootNamespace>
+    <AssemblyName>JIAOFENG.Practices.Logic.File</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,7 +32,7 @@
   <ItemGroup>
     <Reference Include="MySql.Data, Version=6.9.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Dashinginfo.Practices.Database\DLL\MySql.Data.dll</HintPath>
+      <HintPath>..\JIAOFENG.Practices.Database\DLL\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />

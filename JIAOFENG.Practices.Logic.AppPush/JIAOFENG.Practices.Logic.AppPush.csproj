@@ -7,8 +7,8 @@
     <ProjectGuid>{7BD32F59-8464-4F70-A139-BFAE6AA83857}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dashinginfo.Practices.Logic.AppPush</RootNamespace>
-    <AssemblyName>Dashinginfo.Practices.Logic.AppPush</AssemblyName>
+    <RootNamespace>JIAOFENG.Practices.Logic.AppPush</RootNamespace>
+    <AssemblyName>JIAOFENG.Practices.Logic.AppPush</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

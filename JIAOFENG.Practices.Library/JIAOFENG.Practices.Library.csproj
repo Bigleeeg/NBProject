@@ -7,8 +7,8 @@
     <ProjectGuid>{86CD6421-DE7A-423E-A80D-EE58A34D125E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dashinginfo.Practices.Library</RootNamespace>
-    <AssemblyName>Dashinginfo.Practices.Library</AssemblyName>
+    <RootNamespace>JIAOFENG.Practices.Library</RootNamespace>
+    <AssemblyName>JIAOFENG.Practices.Library</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

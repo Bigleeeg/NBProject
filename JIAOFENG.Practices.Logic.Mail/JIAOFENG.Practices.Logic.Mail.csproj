@@ -7,8 +7,8 @@
     <ProjectGuid>{BE0CAA3A-5940-47A4-B5C5-D9D341A1FA66}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dashinginfo.Practices.Logic.Mail</RootNamespace>
-    <AssemblyName>Dashinginfo.Practices.Logic.Mail</AssemblyName>
+    <RootNamespace>JIAOFENG.Practices.Logic.Mail</RootNamespace>
+    <AssemblyName>JIAOFENG.Practices.Logic.Mail</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
