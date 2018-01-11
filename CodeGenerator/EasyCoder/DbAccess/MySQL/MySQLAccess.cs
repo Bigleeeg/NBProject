@@ -26,7 +26,7 @@ namespace EasyCoder
             }
         }
 
-        private System.Data.IDbConnection dbcn;
+        private System.Data.IDbConnection dbcn; 
 
         public System.Data.IDbConnection DbConnection
         {
